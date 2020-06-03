@@ -1,10 +1,10 @@
 package cn.infomany.config;
 
-import cn.hutool.core.lang.Snowflake;
-import cn.hutool.core.util.IdUtil;
 import com.baomidou.mybatisplus.core.incrementer.DefaultIdentifierGenerator;
+import com.baomidou.mybatisplus.core.toolkit.Sequence;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * 用户加载系统中的Bean
@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Bean;
  * @author zjb
  * @date 2020/6/2
  */
+@Configuration
 public class SpringBean {
 
     @Value("${spring.snowflake.workerId}")
@@ -22,8 +23,8 @@ public class SpringBean {
 
 
     @Bean
-    public DefaultIdentifierGenerator defaultIdentifierGenerator() {
-        return new DefaultIdentifierGenerator(workerId, dataCenterId);
+    public Sequence sequence() {
+        return new Sequence(workerId, dataCenterId);
     }
 
 
