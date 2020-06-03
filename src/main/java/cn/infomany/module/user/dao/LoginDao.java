@@ -1,6 +1,6 @@
 package cn.infomany.module.user.dao;
 
-import cn.infomany.common.dao.BeseDao;
+import cn.infomany.common.dao.BaseDao;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,5 +10,5 @@ import org.springframework.stereotype.Component;
  * @date 2020/6/2
  */
 @Component
-public class LoginDao extends BeseDao {
+public class LoginDao extends BaseDao {
 }

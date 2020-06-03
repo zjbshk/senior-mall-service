@@ -1,6 +1,6 @@
 package cn.infomany.common.service;
 
-import cn.infomany.common.dao.BeseDao;
+import cn.infomany.common.dao.BaseDao;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @author zjb
  * @date 2020/6/2
  */
-public class BaseService<K extends BeseDao, M extends BaseMapper<T>, T> extends ServiceImpl<M, T> {
+public class BaseService<K extends BaseDao, M extends BaseMapper<T>, T> extends ServiceImpl<M, T> {
 
     @Autowired
     protected K baseDao;

@@ -1,6 +1,7 @@
 package cn.infomany.module.user.api;
 
 import cn.infomany.common.anno.NoNeedLogin;
+import cn.infomany.common.anno.UserNo;
 import cn.infomany.common.domain.Result;
 import cn.infomany.module.user.domain.dto.LoginDTO;
 import cn.infomany.module.user.service.ILoginService;
@@ -31,8 +32,7 @@ public class UserController {
     }
 
     @GetMapping("/logout")
-    @NoNeedLogin
-    public Result logout(@RequestAttribute Long userNo) {
+    public Result logout(@UserNo Long userNo) {
         return loginService.logout(userNo);
     }
 

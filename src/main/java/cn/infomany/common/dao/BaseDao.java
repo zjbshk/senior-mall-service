@@ -6,5 +6,5 @@ package cn.infomany.common.dao;
  * @author zjb
  * @date 2020/6/2
  */
-public class BeseDao {
+public class BaseDao {
 }

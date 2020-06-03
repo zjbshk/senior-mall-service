@@ -13,6 +13,7 @@ import cn.infomany.module.user.mapper.LoginMapper;
 import cn.infomany.module.user.service.ILoginService;
 import cn.infomany.util.LoginTokenUtil;
 import cn.infomany.util.PasswordUtil;
+import com.baomidou.dynamic.datasource.annotation.DS;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -31,6 +32,7 @@ import java.util.concurrent.TimeUnit;
  */
 @Service
 @Slf4j
+@DS("master")
 public class LoginServiceImpl extends BaseService<LoginDao, LoginMapper, LoginEntity> implements ILoginService {
 
     @Autowired

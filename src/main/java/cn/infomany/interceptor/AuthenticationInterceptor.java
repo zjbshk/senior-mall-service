@@ -2,6 +2,7 @@ package cn.infomany.interceptor;
 
 import cn.infomany.common.anno.NoNeedLogin;
 import cn.infomany.common.constant.ErrorCodeEnum;
+import cn.infomany.common.constant.Resource;
 import cn.infomany.common.exception.BusinessException;
 import cn.infomany.util.LoginTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +26,6 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
 
     @Autowired
     private LoginTokenUtil loginTokenUtil;
-
-    private static final String TOKEN_NAME = "x-access-token";
 
     @Value("${access-control-allow-origin-enable}")
     private boolean accessControlAllowOriginEnable;
@@ -64,8 +63,8 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
         }
 
         // 需要做token校验, 消息头的token优先于请求query参数的token
-        String xHeaderToken = request.getHeader(TOKEN_NAME);
-        String xRequestToken = request.getParameter(TOKEN_NAME);
+        String xHeaderToken = request.getHeader(Resource.TOKEN);
+        String xRequestToken = request.getParameter(Resource.TOKEN);
         String xAccessToken = (Objects.nonNull(xHeaderToken) ? xHeaderToken : xRequestToken);
         if (Objects.isNull(xAccessToken)) {
             throw new BusinessException(ErrorCodeEnum.NOT_LOGGED_IN);
@@ -74,7 +73,7 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
         // 根据token获取登录用户
         try {
             Long no = loginTokenUtil.getNoByToken(xAccessToken);
-            request.setAttribute("userNo", no);
+            request.setAttribute(Resource.USER_NO, no);
         } catch (IllegalArgumentException e) {
             throw new BusinessException(ErrorCodeEnum.TOKEN_EXPIRED);
         }

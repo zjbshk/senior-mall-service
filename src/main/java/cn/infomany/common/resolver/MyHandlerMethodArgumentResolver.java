@@ -1,27 +1,31 @@
 package cn.infomany.common.resolver;
 
+import cn.infomany.common.anno.UserNo;
+import cn.infomany.common.constant.Resource;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
+import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
 /**
- * 有@LoginUser注解的方法参数，注入当前登录用户
+ * 通用参数初始化解析器
+ *
  * @author zjb
  */
 @Component
-public class LoginUserHandlerMethodArgumentResolver implements HandlerMethodArgumentResolver {
+public class MyHandlerMethodArgumentResolver implements HandlerMethodArgumentResolver {
 
     @Override
     public boolean supportsParameter(MethodParameter parameter) {
-        return false;
+        return parameter.hasParameterAnnotation(UserNo.class);
     }
 
     @Override
     public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer container,
                                   NativeWebRequest request, WebDataBinderFactory factory) throws Exception {
-       return null;
+        return request.getAttribute(Resource.USER_NO, RequestAttributes.SCOPE_REQUEST);
     }
 }
