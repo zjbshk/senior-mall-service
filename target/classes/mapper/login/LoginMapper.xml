@@ -6,7 +6,7 @@
                type="cn.infomany.module.user.domain.entity.LoginEntity"></resultMap>
 
     <select id="selectLoginByAccount" resultMap="LoginEntity">
-        select * from login where `username` = #{account} or `phone` = #{account}
+        select * from senior_login where `username` = #{account} or `phone` = #{account}
     </select>
 
 </mapper>

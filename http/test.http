@@ -1,7 +1,12 @@
-POST http://localhost:8080/api/v1/login/
+POST http://localhost:8080/api/v1/user/login
 Content-Type: application/json
 
 {
   "account": "zjb",
-  "password": "1"
+  "password": "123"
 }
+
+###
+GET http://localhost:8080/api/v1/user/logout
+
+###

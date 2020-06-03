@@ -32,8 +32,11 @@ public class UserController {
     }
 
     @GetMapping("/logout")
-    public Result logout(@UserNo Long userNo) {
-        return loginService.logout(userNo);
+    @NoNeedLogin
+    public Result logout() {
+        return loginService.logout(1L);
     }
+
+
 
 }

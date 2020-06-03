@@ -2,6 +2,7 @@ package cn.infomany.config;
 
 import cn.hutool.core.lang.Snowflake;
 import cn.hutool.core.util.IdUtil;
+import com.baomidou.mybatisplus.core.incrementer.DefaultIdentifierGenerator;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 
@@ -19,8 +20,11 @@ public class SpringBean {
     @Value("${spring.snowflake.dataCenterId}")
     private int dataCenterId;
 
+
     @Bean
-    public Snowflake snowflake() {
-        return IdUtil.createSnowflake(workerId, dataCenterId);
+    public DefaultIdentifierGenerator defaultIdentifierGenerator() {
+        return new DefaultIdentifierGenerator(workerId, dataCenterId);
     }
+
+
 }

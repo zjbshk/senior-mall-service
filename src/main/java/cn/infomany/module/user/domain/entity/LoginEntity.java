@@ -1,8 +1,7 @@
 package cn.infomany.module.user.domain.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import cn.infomany.common.anno.TableAuto;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -20,7 +19,7 @@ import java.util.Date;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("senior-login")
+@TableName("senior_login")
 public class LoginEntity {
 
     /**
@@ -60,14 +59,15 @@ public class LoginEntity {
     private Integer state;
 
     /**
-     * 数据最近更新时间
-     */
-    private Date updateTime;
-
-    /**
      * 数据创建时间
      */
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
+    /**
+     * 数据最近更新时间
+     */
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private Date updateTime;
 }
 

@@ -14,6 +14,7 @@ import cn.infomany.module.user.service.ILoginService;
 import cn.infomany.util.LoginTokenUtil;
 import cn.infomany.util.PasswordUtil;
 import com.baomidou.dynamic.datasource.annotation.DS;
+import javafx.scene.control.PasswordField;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -83,8 +84,22 @@ public class LoginServiceImpl extends BaseService<LoginDao, LoginMapper, LoginEn
     @Override
     public Result logout(Long no) {
         // 删除redis中的token信息
-        String key = String.format("user.no.%d", no);
-        redisTemplate.delete(key);
+//        String key = String.format("user.no.%d", no);
+//        redisTemplate.delete(key);
+
+        String salt = PasswordUtil.createSalt();
+        String s = PasswordUtil.encryptedPassword("123456", salt);
+
+        LoginEntity loginEntity = new LoginEntity();
+
+        loginEntity.setPassword(s)
+                .setSalt(salt)
+                .setUsername("zjb")
+                .setState(LoginUserStateEnum.NORMAL.getState())
+                .setPhone("12345678912");
+
+        baseMapper.insert(loginEntity);
+
         return Result.success();
     }
 }
