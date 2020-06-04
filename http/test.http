@@ -1,16 +1,16 @@
-POST http://localhost:8080/api/v1/user/login1
+POST http://localhost:8080/api/v1/user/login
 Content-Type: application/json
 
 {
   "account": "zjb",
-  "password": "123"
+  "password": "123456"
 }
 
 ###
 GET http://localhost:8080/api/v1/user/logout
-token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5NzBkMzdhMC0xYTI1LTRlNjMtYTEwYy02MjkxNjk1YzkwZDUiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwibmJmIjoxNTkxMTkzOTk1LCJleHAiOjE1OTEyODAzOTV9.jguc6ov1vs5L1hMZG-8qNpZ_lTM37zPEF3obd6aSj777g3VYB1W3SSyx9c5QdKIjI6GmJSbAODo2Q-8BU-iGag
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1Y2M0ZWVhYS02OTJkLTQ5ZDYtOGRiYS0xMTdhNjgzODlmNDQiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwibmJmIjoxNTkxMjg1MzM0LCJleHAiOjE1OTEzNzE3MzR9.IE0FbtWuxfXhkxpkDd9UxTos0jUs8cop0oVVBmdp9KGfPatbXF0cjJBmYQG65_9Upaf2pm7TbUO_Sc41zn0tFg
 ###
 
 GET http://localhost:8080/api/v1/user/logout
-token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5NzBkMzdhMC0xYTI1LTRlNjMtYTEwYy02MjkxNjk1YzkwZDUiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwibmJmIjoxNTkxMTkzOTk1LCJleHAiOjE1OTEyODAzOTV9.jguc6ov1vs5L1hMZG-8qNpZ_lTM37zPEF3obd6aSj777g3VYB1W3SSyx9c5QdKIjI6GmJSbAODo2Q-8BU-iGag
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1Y2M0ZWVhYS02OTJkLTQ5ZDYtOGRiYS0xMTdhNjgzODlmNDQiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwibmJmIjoxNTkxMjg1MzM0LCJleHAiOjE1OTEzNzE3MzR9.IE0FbtWuxfXhkxpkDd9UxTos0jUs8cop0oVVBmdp9KGfPatbXF0cjJBmYQG65_9Upaf2pm7TbUO_Sc41zn0tFg
 ###

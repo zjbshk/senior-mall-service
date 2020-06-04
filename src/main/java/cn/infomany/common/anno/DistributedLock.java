@@ -4,29 +4,23 @@ import java.lang.annotation.*;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 分布式锁注解类
+ *
  * @author zjb
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-@Documented
 public @interface DistributedLock {
 
     /**
      * 锁的名称
      * <p>
      * 可使用的 内置参数
-     * ${methodName} | 方法名称
-     * ${className} |  全类名
-     * ${simpleClassName} |  类名
-     * ${`paramName`} |  参数名
-     * #{method()} | 不带参方法（静态方法调用）
-     * #{method(${paramName})} | 带参方法（静态方法调用）
+     * #methodName | 方法名称
+     * #className |  全类名
+     * #simpleClassName |  类名
+     * #paramName |  参数名
      * <p>
-     * 方法调用可以是内置方法，或是全类名的静态方法调用
-     * 内置方法用:
-     * random() | 随机 0 - 1 浮点数
-     * toUpper(str) | 将字符串str转换成大写
-     * toLower(str) | 将字符串str转换成小写
      */
     String value();
 

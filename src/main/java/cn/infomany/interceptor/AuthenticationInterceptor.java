@@ -5,6 +5,7 @@ import cn.infomany.common.constant.ErrorCodeEnum;
 import cn.infomany.common.constant.Resource;
 import cn.infomany.common.exception.BusinessException;
 import cn.infomany.util.LoginTokenUtil;
+import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -74,7 +75,7 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
         try {
             Long no = loginTokenUtil.getNoByToken(xAccessToken);
             request.setAttribute(Resource.USER_NO, no);
-        } catch (IllegalArgumentException e) {
+        } catch (ExpiredJwtException | IllegalArgumentException e) {
             throw new BusinessException(ErrorCodeEnum.TOKEN_EXPIRED);
         }
 

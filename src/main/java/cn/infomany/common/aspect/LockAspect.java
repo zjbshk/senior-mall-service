@@ -1,15 +1,19 @@
 package cn.infomany.common.aspect;
 
 import cn.infomany.common.anno.DistributedLock;
+import cn.infomany.util.SpelUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.lang.reflect.Method;
 
 /**
  * 分布式锁截面
@@ -32,9 +36,16 @@ public class LockAspect {
     @Around("annotationPointCut() && @annotation(distributedLock)")
     public Object lockAround(ProceedingJoinPoint joinPoint, DistributedLock distributedLock) {
         String value = distributedLock.value();
+        // 得到被代理的方法
+        Method method = ((MethodSignature) joinPoint.getSignature()).getMethod();
+        // 得到被切面修饰的方法的参数列表
+        Object[] args = joinPoint.getArgs();
 
+        // 获取表达式结果值
+        String name = SpelUtil.parseKey(value, method, args);
+        log.info("解析分布式锁name：{}", name);
 
-        RLock lock = redissonClient.getLock(value);
+        RLock lock = redissonClient.getLock(name);
         try {
             // 获取锁
             log.debug("获取锁");
