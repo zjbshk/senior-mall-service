@@ -54,7 +54,7 @@ public class LoginServiceImpl extends BaseService<LoginDao, LoginMapper, LoginEn
 
         // 比较密码是否一致
         String saltPassword = PasswordUtil.encryptedPassword(loginDTO.getPassword(), loginEntity.getSalt());
-        if (saltPassword.equals(loginEntity.getPassword())) {
+        if (!saltPassword.equals(loginEntity.getPassword())) {
             log.error("登录账号:{}，密码不匹配{}", loginDTO.getAccount(), loginDTO.getPassword());
             throw new BusinessException(ErrorCodeEnum.INCORRECT_USERNAME_OR_PASSWORD);
         }
@@ -84,21 +84,21 @@ public class LoginServiceImpl extends BaseService<LoginDao, LoginMapper, LoginEn
     @Override
     public Result logout(Long no) {
         // 删除redis中的token信息
-//        String key = String.format("user.no.%d", no);
-//        redisTemplate.delete(key);
+        String key = String.format("user.no.%d", no);
+        redisTemplate.delete(key);
 
-        String salt = PasswordUtil.createSalt();
-        String s = PasswordUtil.encryptedPassword("123456", salt);
-
-        LoginEntity loginEntity = new LoginEntity();
-
-        loginEntity.setPassword(s)
-                .setSalt(salt)
-                .setUsername("zjb")
-                .setState(LoginUserStateEnum.NORMAL.getState())
-                .setPhone("12345678912");
-
-        baseMapper.insert(loginEntity);
+//        String salt = PasswordUtil.createSalt();
+//        String s = PasswordUtil.encryptedPassword("123456", salt);
+//
+//        LoginEntity loginEntity = new LoginEntity();
+//
+//        loginEntity.setPassword(s)
+//                .setSalt(salt)
+//                .setUsername("zjb")
+//                .setState(LoginUserStateEnum.NORMAL.getState())
+//                .setPhone("12345678912");
+//
+//        baseMapper.insert(loginEntity);
 
         return Result.success();
     }

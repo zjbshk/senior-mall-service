@@ -16,6 +16,4 @@ public class TokenInfo {
     private String token;
 
     private Long expired;
-
-
 }

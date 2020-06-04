@@ -1,4 +1,4 @@
-POST http://localhost:8080/api/v1/user/login
+POST http://localhost:8080/api/v1/user/login1
 Content-Type: application/json
 
 {
@@ -7,6 +7,6 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8080/api/v1/user/logout
-
+GET http://localhost:8080/api/v1/user/logout1
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5NzBkMzdhMC0xYTI1LTRlNjMtYTEwYy02MjkxNjk1YzkwZDUiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwibmJmIjoxNTkxMTkzOTk1LCJleHAiOjE1OTEyODAzOTV9.jguc6ov1vs5L1hMZG-8qNpZ_lTM37zPEF3obd6aSj777g3VYB1W3SSyx9c5QdKIjI6GmJSbAODo2Q-8BU-iGag
 ###

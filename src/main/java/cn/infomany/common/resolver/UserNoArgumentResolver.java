@@ -16,7 +16,7 @@ import org.springframework.web.method.support.ModelAndViewContainer;
  * @author zjb
  */
 @Component
-public class MyHandlerMethodArgumentResolver implements HandlerMethodArgumentResolver {
+public class UserNoArgumentResolver implements HandlerMethodArgumentResolver {
 
     @Override
     public boolean supportsParameter(MethodParameter parameter) {
