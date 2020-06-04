@@ -1,5 +1,6 @@
 package cn.infomany.module.user.api;
 
+import cn.infomany.common.anno.DistributedLock;
 import cn.infomany.common.anno.NoNeedLogin;
 import cn.infomany.common.anno.UserNo;
 import cn.infomany.common.domain.Result;
@@ -33,6 +34,7 @@ public class UserController {
     }
 
     @GetMapping("/logout")
+    @DistributedLock("12")
     public Result logout(@UserNo Long no) {
         return loginService.logout(no);
     }

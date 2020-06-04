@@ -16,11 +16,14 @@ import cn.infomany.util.PasswordUtil;
 import com.baomidou.dynamic.datasource.annotation.DS;
 import javafx.scene.control.PasswordField;
 import lombok.extern.slf4j.Slf4j;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.Objects;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -41,6 +44,7 @@ public class LoginServiceImpl extends BaseService<LoginDao, LoginMapper, LoginEn
 
     @Autowired
     private LoginTokenUtil loginTokenUtil;
+
 
     @Override
     public Result login(LoginDTO loginDTO) {
@@ -83,6 +87,7 @@ public class LoginServiceImpl extends BaseService<LoginDao, LoginMapper, LoginEn
 
     @Override
     public Result logout(Long no) {
+
         // 删除redis中的token信息
         String key = String.format("user.no.%d", no);
         redisTemplate.delete(key);
