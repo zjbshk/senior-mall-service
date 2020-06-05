@@ -1,0 +1,356 @@
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T070837.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMzM2ZTk3NS0zYjYyLTRhYTUtOTBmYS1kNGJkNTE3N2VkNmYiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1NTI2OSwiZXhwIjoxNTkxNDQxNjY5fQ.DVYkVhWKHSsvDbAducCRYDLXejab_6y6uUxowsgzEMMsjxnZ9RSy3LXNrYyCt-LZqNEQhYiCbIHyDvOzE_L-Pw
+
+<> 2020-06-05T070822.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMzM2ZTk3NS0zYjYyLTRhYTUtOTBmYS1kNGJkNTE3N2VkNmYiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1NTI2OSwiZXhwIjoxNTkxNDQxNjY5fQ.DVYkVhWKHSsvDbAducCRYDLXejab_6y6uUxowsgzEMMsjxnZ9RSy3LXNrYyCt-LZqNEQhYiCbIHyDvOzE_L-Pw
+
+<> 2020-06-05T070814.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T070800.400.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-05T070750.200.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T062151.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T062123.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061711.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061709.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061708.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061226.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061214.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061212.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061211.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061210.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061209.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061208.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061206.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061205.200.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061204.200.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061033-1.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061033.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061032-1.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061032.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061031-1.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061031.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061030-1.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061030.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061029-1.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061029.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061028.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061027.200.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061026.200.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061023.200.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061020.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061019.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061018.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061017.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061016.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061015.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061014.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061013.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061011.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061007.200.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061005.200.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T061002.200.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T060758.500.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T060757.500.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T060459.200.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
+
+<> 2020-06-05T060456.200.json
+
+###
+
