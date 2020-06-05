@@ -21,7 +21,7 @@ public @interface FrequencyLimit {
     /**
      * 设置名称
      */
-    int value();
+    String value();
 
     /**
      * 指定一段时间
@@ -39,12 +39,12 @@ public @interface FrequencyLimit {
      * 在这段时间中最大的访问次数
      * 超过就进入限制状态
      */
-    int maxTimes();
+    int maxTimes() default -1;
 
     /**
      * 当访问到达最大次数时，限制多长时间
      */
-    int limitedTime();
+    int limitedTime() default 3600;
 
     /**
      * 限制时间的单位

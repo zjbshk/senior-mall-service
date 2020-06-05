@@ -41,7 +41,6 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
     private String accessControlAllowOrigin;
 
 
-
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
@@ -90,6 +89,10 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
         if (!token.equals(xAccessToken)) {
             throw new BusinessException(ErrorCodeEnum.THE_DEVICE_WAS_SQUEEZED_OFF_LINE_TOKEN_INVALID);
         }
+
+        // 设置request中的参数
+        request.setAttribute(Resource.USER_NO, no);
+        request.setAttribute(Resource.SIGNATURE, signature);
 
         return true;
     }

@@ -8,7 +8,8 @@ package cn.infomany.common.constant;
  */
 public interface Resource {
 
+    String EMPTY_STRING = "";
+    String SIGNATURE = "signature";
     String TOKEN = "token";
     String USER_NO = "userNo";
-    String EMPTY_STRING = "";
 }

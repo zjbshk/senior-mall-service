@@ -1,6 +1,7 @@
 package cn.infomany.module.user.api;
 
 import cn.infomany.common.anno.DistributedLock;
+import cn.infomany.common.anno.FrequencyLimit;
 import cn.infomany.common.anno.NoNeedLogin;
 import cn.infomany.common.anno.UserNo;
 import cn.infomany.common.domain.Result;
@@ -38,6 +39,7 @@ public class UserController {
 
     @GetMapping("/logout")
     @DistributedLock("#methodName + #no")
+    @FrequencyLimit(value = "123", epoch = 20, times = 2,maxTimes = 5)
     public Result logout(@UserNo Long no) {
         return loginService.logout(no);
     }

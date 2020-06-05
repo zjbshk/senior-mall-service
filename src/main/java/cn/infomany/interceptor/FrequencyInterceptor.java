@@ -11,6 +11,7 @@ import cn.infomany.util.IpUtil;
 import cn.infomany.util.LoginTokenUtil;
 import cn.infomany.util.TokenRedisUtil;
 import io.jsonwebtoken.ExpiredJwtException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -29,6 +30,7 @@ import java.util.Objects;
  *
  * @author zjb
  */
+@Slf4j
 @Component
 public class FrequencyInterceptor extends HandlerInterceptorAdapter {
 
@@ -51,23 +53,50 @@ public class FrequencyInterceptor extends HandlerInterceptorAdapter {
         }
 
 
+        // 获取限制的唯一签名
         UniquelyIdentifiesEnum uniquely = frequencyLimit.uniquely();
-        if (UniquelyIdentifiesEnum.IP.equals(uniquely)) {
-            String ip = IpUtil.getIp(request);
-            String key = String.format("%s.%s", frequencyLimit.value(), ip);
-            Integer count = redisService.getObject(key, Integer.class);
-            redisService.incr(key, 1);
-            if (Objects.isNull(count)) {
-                redisService.expire(key, frequencyLimit.epoch(), frequencyLimit.timeUnit());
-            } else {
-                if (count > frequencyLimit.times()) {
-                    throw new BusinessException(ErrorCodeEnum.ACCESS_FREQUENCY_IS_TOO_FAST_TO_RESPOND);
-                }
-
-            }
+        Long userNo = (Long) request.getAttribute(Resource.USER_NO);
+        String sign;
+        switch (uniquely) {
+            case IP_USER:
+                String ip = IpUtil.getIp(request);
+                sign = String.format("%s:%d", ip, userNo);
+                break;
+            case IP:
+                sign = IpUtil.getIp(request);
+                break;
+            case USER:
+                sign = userNo.toString();
+                break;
+            case TOKEN:
+                sign = request.getHeader(Resource.TOKEN);
+                break;
+            default:
+                sign = Resource.EMPTY_STRING;
+                break;
         }
-        return false;
 
+        // 组合获取key
+        String key = String.format("%s.%s", frequencyLimit.value(), sign);
+        Integer count = redisService.getObject(key, Integer.class);
+        redisService.incr(key, 1);
+        if (Objects.isNull(count)) {
+            redisService.expire(key, frequencyLimit.epoch(), frequencyLimit.timeUnit());
+            return true;
+        }
+
+        if (frequencyLimit.maxTimes() != -1 && count >= frequencyLimit.maxTimes()) {
+            redisService.expire(key, frequencyLimit.limitedTime(), frequencyLimit.limitedTimeUnit());
+            log.error("用户[{}],访问次数{}超过，访问受限key:({})", userNo, count + 1, key);
+            throw new BusinessException(ErrorCodeEnum.ACCESS_TOO_FAST_IP_OR_USER_IS_RESTRICTED);
+        }
+
+        if (count >= frequencyLimit.times()) {
+            log.error("用户[{}],访问次数{}超过，访问受限key:({})", userNo, count + 1, key);
+            throw new BusinessException(ErrorCodeEnum.ACCESS_FREQUENCY_IS_TOO_FAST_TO_RESPOND);
+        }
+
+        return true;
     }
 
 

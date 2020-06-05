@@ -23,7 +23,10 @@ public enum ErrorCodeEnum {
     PARAMETER_BINDING_FAILED(117, "参数绑定失败", "Parameter binding failed"),
     NOT_SUPPORT_THE_CURRENT_REQUEST_METHOD(118, "不支持当前请求方法", "Not support the current request method"),
     ABNORMAL_HEAD_LOSS(119, "头丢失异常", "Abnormal head loss"),
+
+    /*访问频率*/
     ACCESS_FREQUENCY_IS_TOO_FAST_TO_RESPOND(120, "访问频率过快无法响应", "Access frequency is too fast to respond"),
+    ACCESS_TOO_FAST_IP_OR_USER_IS_RESTRICTED(121, "访问过快IP或用户被限制", "Access too fast IP or user is restricted"),
 
     /**
      * 业务异常从这里开始 每次增加100个

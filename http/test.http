@@ -3,14 +3,15 @@ Content-Type: application/json
 
 {
   "account": "zjb",
-  "password": "123456"
+  "password": "123456",
+  "signature": "1"
 }
 
 ###
 GET http://localhost:8080/api/v1/user/logout
-token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1Y2M0ZWVhYS02OTJkLTQ5ZDYtOGRiYS0xMTdhNjgzODlmNDQiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwibmJmIjoxNTkxMjg1MzM0LCJleHAiOjE1OTEzNzE3MzR9.IE0FbtWuxfXhkxpkDd9UxTos0jUs8cop0oVVBmdp9KGfPatbXF0cjJBmYQG65_9Upaf2pm7TbUO_Sc41zn0tFg
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
 ###
 
 GET http://localhost:8080/api/v1/user/logout
-token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1Y2M0ZWVhYS02OTJkLTQ5ZDYtOGRiYS0xMTdhNjgzODlmNDQiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwibmJmIjoxNTkxMjg1MzM0LCJleHAiOjE1OTEzNzE3MzR9.IE0FbtWuxfXhkxpkDd9UxTos0jUs8cop0oVVBmdp9KGfPatbXF0cjJBmYQG65_9Upaf2pm7TbUO_Sc41zn0tFg
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
 ###

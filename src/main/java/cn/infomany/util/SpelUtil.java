@@ -3,13 +3,17 @@ package cn.infomany.util;
 import cn.hutool.core.bean.BeanUtil;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
+import org.springframework.beans.BeanUtils;
 import org.springframework.core.LocalVariableTableParameterNameDiscoverer;
+import org.springframework.data.redis.hash.BeanUtilsHashMapper;
 import org.springframework.expression.ExpressionParser;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.util.StringUtils;
 
 import java.lang.reflect.Method;
+import java.util.Map;
 
 public class SpelUtil {
 
@@ -33,6 +37,10 @@ public class SpelUtil {
          */
         private String simpleClassName;
 
+
+        public Map<String, Object> toMap() {
+            return null;
+        }
 
     }
 
@@ -60,12 +68,12 @@ public class SpelUtil {
 
 
         // 设置预先定义好的值
-        VariableClass.VariableClassBuilder variableClassBuilder = VariableClass.builder()
+        VariableClass variableClass = VariableClass.builder()
                 .methodName(methodName)
                 .simpleClassName(declaringClass.getSimpleName())
-                .className(declaringClass.getName());
+                .className(declaringClass.getName()).build();
 
-        context.setVariables(BeanUtil.beanToMap(variableClassBuilder));
+        context.setVariables(BeanUtil.beanToMap(variableClass));
 
 
         // 把方法参数放入SPEL上下文中

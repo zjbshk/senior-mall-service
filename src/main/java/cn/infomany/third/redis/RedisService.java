@@ -30,9 +30,6 @@ public class RedisService {
     private ValueOperations<String, String> redisValueOperations;
 
     @Autowired
-    private ValueOperations<String, Integer> redisIntegerOperations;
-
-    @Autowired
     private HashOperations<String, String, Object> redisHashOperations;
 
     @Autowired
