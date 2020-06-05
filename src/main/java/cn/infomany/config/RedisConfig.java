@@ -28,11 +28,13 @@ public class RedisConfig {
     @Bean
     public RedisTemplate<String, Object> redisTemplate() {
         Jackson2JsonRedisSerializer<Object> jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer<Object>(Object.class);
+
         ObjectMapper om = new ObjectMapper();
         om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
         om.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
         jackson2JsonRedisSerializer.setObjectMapper(om);
-        RedisTemplate<String, Object> template = new RedisTemplate<String, Object>();
+
+        RedisTemplate<String, Object> template = new RedisTemplate<>();
         template.setConnectionFactory(factory);
         template.setKeySerializer(new StringRedisSerializer());
         template.setValueSerializer(jackson2JsonRedisSerializer);
@@ -53,6 +55,7 @@ public class RedisConfig {
         return redisTemplate.opsForValue();
     }
 
+
     @Bean
     public ListOperations<String, Object> listOperations(RedisTemplate<String, Object> redisTemplate) {
         return redisTemplate.opsForList();
@@ -67,7 +70,6 @@ public class RedisConfig {
     public ZSetOperations<String, Object> zSetOperations(RedisTemplate<String, Object> redisTemplate) {
         return redisTemplate.opsForZSet();
     }
-
 
 
 }

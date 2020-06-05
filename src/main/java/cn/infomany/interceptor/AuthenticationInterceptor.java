@@ -5,15 +5,18 @@ import cn.infomany.common.constant.ErrorCodeEnum;
 import cn.infomany.common.constant.Resource;
 import cn.infomany.common.exception.BusinessException;
 import cn.infomany.util.LoginTokenUtil;
+import cn.infomany.util.TokenRedisUtil;
 import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -28,6 +31,9 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
     @Autowired
     private LoginTokenUtil loginTokenUtil;
 
+    @Autowired
+    private TokenRedisUtil tokenRedisUtil;
+
     @Value("${access-control-allow-origin-enable}")
     private boolean accessControlAllowOriginEnable;
 
@@ -35,15 +41,7 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
     private String accessControlAllowOrigin;
 
 
-    /**
-     * 拦截服务器端响应处理ajax请求返回结果
-     *
-     * @param request
-     * @param response
-     * @param handler
-     * @return
-     * @throws Exception
-     */
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
@@ -72,11 +70,25 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
         }
 
         // 根据token获取登录用户
+        Map map;
         try {
-            Long no = loginTokenUtil.getNoByToken(xAccessToken);
-            request.setAttribute(Resource.USER_NO, no);
+            map = loginTokenUtil.getMapByToken(xAccessToken);
         } catch (ExpiredJwtException | IllegalArgumentException e) {
             throw new BusinessException(ErrorCodeEnum.TOKEN_EXPIRED);
+        }
+
+        Long no = (Long) map.get(LoginTokenUtil.NO);
+        String signature = (String) map.get(LoginTokenUtil.SIGNATURE);
+
+
+        String token = tokenRedisUtil.get(no, signature);
+        if (StringUtils.isEmpty(token)) {
+            throw new BusinessException(ErrorCodeEnum.TOKEN_EXPIRED);
+        }
+
+        // 判断token是不是一样的，不是代表被挤下线
+        if (!token.equals(xAccessToken)) {
+            throw new BusinessException(ErrorCodeEnum.THE_DEVICE_WAS_SQUEEZED_OFF_LINE_TOKEN_INVALID);
         }
 
         return true;

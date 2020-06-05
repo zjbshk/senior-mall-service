@@ -13,6 +13,7 @@ import cn.infomany.module.user.mapper.LoginMapper;
 import cn.infomany.module.user.service.ILoginService;
 import cn.infomany.util.LoginTokenUtil;
 import cn.infomany.util.PasswordUtil;
+import cn.infomany.util.TokenRedisUtil;
 import com.baomidou.dynamic.datasource.annotation.DS;
 import javafx.scene.control.PasswordField;
 import lombok.extern.slf4j.Slf4j;
@@ -22,6 +23,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Objects;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -39,8 +42,9 @@ import java.util.concurrent.TimeUnit;
 @DS("master")
 public class LoginServiceImpl extends BaseService<LoginDao, LoginMapper, LoginEntity> implements ILoginService {
 
+
     @Autowired
-    private RedisTemplate<String, Object> redisTemplate;
+    private TokenRedisUtil tokenRedisUtil;
 
     @Autowired
     private LoginTokenUtil loginTokenUtil;
@@ -73,12 +77,12 @@ public class LoginServiceImpl extends BaseService<LoginDao, LoginMapper, LoginEn
 
         // 生成token
         Long no = loginEntity.getNo();
-        TokenInfo tokenInfo = loginTokenUtil.generateToken(no);
+        String signature = loginDTO.getSignature();
+        TokenInfo tokenInfo = loginTokenUtil.generateToken(no, signature);
 
         // 将token放入redis
-        String key = String.format("user.no.%d", no);
-        redisTemplate.opsForValue().set(key, tokenInfo.getToken());
-        redisTemplate.expire(key, loginTokenUtil.getExpireSeconds(), TimeUnit.SECONDS);
+        tokenRedisUtil.save(no, signature, tokenInfo.getToken());
+
 
         log.info("账号:{},生成token信息:{}", loginDTO.getAccount(), tokenInfo);
 
@@ -89,8 +93,7 @@ public class LoginServiceImpl extends BaseService<LoginDao, LoginMapper, LoginEn
     public Result logout(Long no) {
 
         // 删除redis中的token信息
-        String key = String.format("user.no.%d", no);
-        redisTemplate.delete(key);
+        tokenRedisUtil.del(no, null);
 
 //        String salt = PasswordUtil.createSalt();
 //        String s = PasswordUtil.encryptedPassword("123456", salt);

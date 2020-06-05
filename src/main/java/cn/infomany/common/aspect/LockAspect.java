@@ -48,7 +48,7 @@ public class LockAspect {
         RLock lock = redissonClient.getLock(name);
         try {
             // 获取锁
-            log.debug("获取锁");
+            log.debug("获取锁[{}]", name);
             if (distributedLock.isAsync()) {
                 lock.lockAsync(distributedLock.leaseTime(), distributedLock.timeUnit());
             } else {
@@ -62,7 +62,7 @@ public class LockAspect {
             throwable.printStackTrace();
         } finally {
             // 释放锁
-            log.debug("释放锁");
+            log.debug("释放锁[{}]", name);
             if (distributedLock.isAsync()) {
                 lock.unlockAsync();
             } else {

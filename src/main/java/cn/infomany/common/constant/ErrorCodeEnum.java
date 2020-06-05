@@ -23,6 +23,7 @@ public enum ErrorCodeEnum {
     PARAMETER_BINDING_FAILED(117, "参数绑定失败", "Parameter binding failed"),
     NOT_SUPPORT_THE_CURRENT_REQUEST_METHOD(118, "不支持当前请求方法", "Not support the current request method"),
     ABNORMAL_HEAD_LOSS(119, "头丢失异常", "Abnormal head loss"),
+    ACCESS_FREQUENCY_IS_TOO_FAST_TO_RESPOND(120, "访问频率过快无法响应", "Access frequency is too fast to respond"),
 
     /**
      * 业务异常从这里开始 每次增加100个
@@ -33,6 +34,9 @@ public enum ErrorCodeEnum {
     INCORRECT_USERNAME_OR_PASSWORD(1101, "账号或密码错误", "Incorrect username or password"),
     ACCOUNT_IS_FREEZE(1102, "账号被冻结", "Account is freeze"),
     TOKEN_EXPIRED(1103, "token过期", "Token expired"),
+    THE_DEVICE_WAS_SQUEEZED_OFF_LINE_TOKEN_INVALID(1104, "设备被挤下线，令牌失效", "The device is squeezed offline token invalid"),
+
+
     ;
 
     private int code;

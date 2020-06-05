@@ -10,4 +10,5 @@ public interface Resource {
 
     String TOKEN = "token";
     String USER_NO = "userNo";
+    String EMPTY_STRING = "";
 }
