@@ -4,9 +4,15 @@ import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * ip工具类
+ *
+ * @author zjb
+ */
 public class IpUtil {
 
     private final static String IP_SEPARATOR = ",";
+    private final static String UNKNOWN = "unknown";
 
     /**
      * 获取客户端Ip
@@ -17,13 +23,13 @@ public class IpUtil {
 
         String ip = request.getHeader("X-Real-IP");
 
-        if (StringUtils.isBlank(ip) || "unknown".equalsIgnoreCase(ip)) {
+        if (StringUtils.isBlank(ip) || UNKNOWN.equalsIgnoreCase(ip)) {
             ip = request.getHeader("x-forwarded-for");
         } else {
             return ip;
         }
 
-        if (StringUtils.isBlank(ip) || "unknown".equalsIgnoreCase(ip)) {
+        if (StringUtils.isBlank(ip) || UNKNOWN.equalsIgnoreCase(ip)) {
             ip = request.getHeader("Proxy-Client-IP");
         } else {
             // 当有多级反向代理时，x-forwarded-for值为多个时取第一个ip地址
@@ -33,19 +39,19 @@ public class IpUtil {
             return ip;
         }
 
-        if (StringUtils.isBlank(ip) || "unknown".equalsIgnoreCase(ip)) {
+        if (StringUtils.isBlank(ip) || UNKNOWN.equalsIgnoreCase(ip)) {
             ip = request.getHeader("WL-Proxy-Client-IP");
         } else {
             return ip;
         }
 
-        if (StringUtils.isBlank(ip) || "unknown".equalsIgnoreCase(ip)) {
+        if (StringUtils.isBlank(ip) || UNKNOWN.equalsIgnoreCase(ip)) {
             ip = request.getRemoteAddr();
         } else {
             return ip;
         }
 
-        if (StringUtils.isBlank(ip) || "unknown".equalsIgnoreCase(ip)) {
+        if (StringUtils.isBlank(ip) || UNKNOWN.equalsIgnoreCase(ip)) {
             ip = "";
         }
         return ip;

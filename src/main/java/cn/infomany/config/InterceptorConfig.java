@@ -11,6 +11,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 
 import java.util.List;
 
+/**
+ * 拦截器配置类
+ *
+ * @author zjb
+ */
 @Configuration
 public class InterceptorConfig extends WebMvcConfigurationSupport {
 

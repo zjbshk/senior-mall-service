@@ -16,12 +16,11 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class TokenRedisUtil {
 
+    private final static String TOKEN_KEY = "user.no.%s%d";
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
     @Autowired
     private LoginTokenUtil loginTokenUtil;
-
-    private final static String TOKEN_KEY = "user.no.%s%d";
 
     /**
      * 保存对应的token

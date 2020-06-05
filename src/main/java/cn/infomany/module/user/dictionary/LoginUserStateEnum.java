@@ -30,15 +30,15 @@ public enum LoginUserStateEnum {
         this.desc = desc;
     }
 
-    public boolean is(Integer code) {
-        return this.state.equals(code);
-    }
-
     public static LoginUserStateEnum valueOf(Integer state) {
         List<LoginUserStateEnum> loginUserStateEnums = Arrays.asList(values());
         Optional<LoginUserStateEnum> firstLoginUser = loginUserStateEnums
                 .stream().filter(loginUserStateEnum -> loginUserStateEnum.is(state)).findFirst();
         return firstLoginUser.orElseThrow(() -> new IllegalArgumentException("LoginUserStateEnum不存在类型[" + state + "]"));
+    }
+
+    public boolean is(Integer code) {
+        return this.state.equals(code);
     }
 
     public Integer getState() {

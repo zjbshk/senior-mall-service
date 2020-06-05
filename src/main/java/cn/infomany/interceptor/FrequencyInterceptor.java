@@ -1,28 +1,20 @@
 package cn.infomany.interceptor;
 
 import cn.infomany.common.anno.FrequencyLimit;
-import cn.infomany.common.anno.NoNeedLogin;
 import cn.infomany.common.constant.ErrorCodeEnum;
 import cn.infomany.common.constant.Resource;
 import cn.infomany.common.constant.UniquelyIdentifiesEnum;
 import cn.infomany.common.exception.BusinessException;
 import cn.infomany.third.redis.RedisService;
 import cn.infomany.util.IpUtil;
-import cn.infomany.util.LoginTokenUtil;
-import cn.infomany.util.TokenRedisUtil;
-import io.jsonwebtoken.ExpiredJwtException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import org.springframework.util.StringUtils;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.lang.reflect.Method;
-import java.util.Map;
 import java.util.Objects;
 
 /**

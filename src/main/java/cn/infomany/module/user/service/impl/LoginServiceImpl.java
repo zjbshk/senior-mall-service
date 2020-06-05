@@ -15,19 +15,11 @@ import cn.infomany.util.LoginTokenUtil;
 import cn.infomany.util.PasswordUtil;
 import cn.infomany.util.TokenRedisUtil;
 import com.baomidou.dynamic.datasource.annotation.DS;
-import javafx.scene.control.PasswordField;
 import lombok.extern.slf4j.Slf4j;
-import org.redisson.api.RLock;
-import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.util.Objects;
-import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 /**
  * <p>

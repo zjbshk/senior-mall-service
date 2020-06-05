@@ -10,7 +10,6 @@ import cn.infomany.module.user.domain.dto.LoginDTO;
 import cn.infomany.module.user.service.ILoginService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,7 +38,7 @@ public class UserController {
 
     @GetMapping("/logout")
     @DistributedLock("#methodName + #no")
-    @FrequencyLimit(value = "123", epoch = 20, times = 2,maxTimes = 5)
+    @FrequencyLimit(value = "123", epoch = 20, times = 2, maxTimes = 5)
     public Result logout(@UserNo Long no) {
         return loginService.logout(no);
     }

@@ -23,16 +23,15 @@ import java.util.*;
 public class LoginTokenUtil {
 
     /**
-     * 过期时间一天
-     */
-    @Value("${token.expire.seconds}")
-    private Integer expireSeconds;
-    /**
      * jwt加密字段
      */
     public static final String NO = "no";
     public static final String SIGNATURE = "signature";
-
+    /**
+     * 过期时间一天
+     */
+    @Value("${token.expire.seconds}")
+    private Integer expireSeconds;
     @Value("${jwt.key}")
     private String jwtKey;
 

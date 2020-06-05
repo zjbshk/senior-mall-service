@@ -1,6 +1,5 @@
 package cn.infomany.config;
 
-import com.baomidou.mybatisplus.core.incrementer.DefaultIdentifierGenerator;
 import com.baomidou.mybatisplus.core.toolkit.Sequence;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
@@ -23,18 +22,15 @@ public class SpringBean {
 
     @Value("${spring.snowflake.dataCenterId}")
     private int dataCenterId;
-
+    @Value("${spring.redis.host}")
+    private String redisHost;
+    @Value("${spring.redis.port}")
+    private Integer redisPort;
 
     @Bean
     public Sequence sequence() {
         return new Sequence(workerId, dataCenterId);
     }
-
-    @Value("${spring.redis.host}")
-    private String redisHost;
-
-    @Value("${spring.redis.port}")
-    private Integer redisPort;
 
     @Bean
     public RedissonClient redissonClient() {

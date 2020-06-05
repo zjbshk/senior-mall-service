@@ -1,8 +1,6 @@
 package cn.infomany.common.controller;
 
-import cn.infomany.common.constant.ErrorCodeEnum;
 import cn.infomany.common.domain.Result;
-import cn.infomany.common.exception.BusinessException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.ErrorProperties;
 import org.springframework.boot.autoconfigure.web.ServerProperties;

@@ -3,10 +3,7 @@ package cn.infomany.util;
 import cn.hutool.core.bean.BeanUtil;
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
-import org.springframework.beans.BeanUtils;
 import org.springframework.core.LocalVariableTableParameterNameDiscoverer;
-import org.springframework.data.redis.hash.BeanUtilsHashMapper;
 import org.springframework.expression.ExpressionParser;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
@@ -15,34 +12,13 @@ import org.springframework.util.StringUtils;
 import java.lang.reflect.Method;
 import java.util.Map;
 
+/**
+ * Spel表达式工具类
+ *
+ * @author zjb
+ */
 public class SpelUtil {
 
-
-    @Data
-    @Builder
-    private static class VariableClass {
-
-        /**
-         * 方法名称
-         */
-        private String methodName;
-
-        /**
-         * 全类名
-         */
-        private String className;
-
-        /**
-         * 类名
-         */
-        private String simpleClassName;
-
-
-        public Map<String, Object> toMap() {
-            return null;
-        }
-
-    }
 
     /**
      * 获取缓存的key
@@ -52,7 +28,9 @@ public class SpelUtil {
      */
     public static String parseKey(String key, Method method, Object[] args) {
 
-        if (StringUtils.isEmpty(key)) return null;
+        if (StringUtils.isEmpty(key)) {
+            return null;
+        }
 
         // 获取被拦截方法参数名列表(使用Spring支持类库)
         LocalVariableTableParameterNameDiscoverer u = new LocalVariableTableParameterNameDiscoverer();
@@ -81,5 +59,31 @@ public class SpelUtil {
             context.setVariable(paraNameArr[i], args[i]);
         }
         return parser.parseExpression(key).getValue(context, String.class);
+    }
+
+    @Data
+    @Builder
+    private static class VariableClass {
+
+        /**
+         * 方法名称
+         */
+        private String methodName;
+
+        /**
+         * 全类名
+         */
+        private String className;
+
+        /**
+         * 类名
+         */
+        private String simpleClassName;
+
+
+        public Map<String, Object> toMap() {
+            return null;
+        }
+
     }
 }

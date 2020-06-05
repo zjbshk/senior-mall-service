@@ -6,6 +6,12 @@ import org.springframework.stereotype.Component;
 
 import java.util.function.Supplier;
 
+/**
+ * 自动生成编号
+ * 配合{@link cn.infomany.common.anno.TableAuto}使用
+ *
+ * @author zjb
+ */
 @Component
 public class AutoGenerateNo implements Supplier<Object> {
 
