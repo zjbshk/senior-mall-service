@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 /**
- * @author DELL
+ * @author zjb
  * @Description: Springboot全局异常统一处理
  */
 @RestController

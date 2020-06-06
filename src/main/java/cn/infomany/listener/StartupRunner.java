@@ -13,9 +13,7 @@ import java.util.Objects;
 /**
  * 应用启动以后检测code码
  *
- * @author zhuo
- * @version 1.0
- * @since JDK1.8
+ * @author zjb
  */
 
 @Component

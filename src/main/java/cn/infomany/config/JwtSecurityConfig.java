@@ -19,8 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author likai
- * @Date 2018/10/18
+ * @author zjb
  */
 @Configuration
 public class JwtSecurityConfig {
