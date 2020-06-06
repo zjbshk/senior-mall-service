@@ -1,5 +1,7 @@
 package cn.infomany.module.user.api;
 
+import cn.infomany.common.anno.DistributedLock;
+import cn.infomany.common.anno.FrequencyLimit;
 import cn.infomany.common.anno.UserNo;
 import cn.infomany.common.anno.UserSignature;
 import cn.infomany.common.domain.Result;
@@ -31,13 +33,18 @@ public class UserController {
 
     @PostMapping("/login")
     @RequiresGuest
+    @DistributedLock(value = "#methodName", leaseTime = 10)
     public Result login(@Valid @RequestBody LoginDTO loginDTO) {
+        try {
+            Thread.sleep(10 * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return loginService.login(loginDTO);
     }
 
     @GetMapping("/logout")
     public Result logout(@UserNo Long no, @UserSignature String signature) {
-
         return loginService.logout(no, signature);
     }
 

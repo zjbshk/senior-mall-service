@@ -1,3 +1,257 @@
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T091137.500.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T091128.500.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T091012.200.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T091010.200.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T090838.200.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T090833.200.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T090829.200.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T090812.200.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T090142.400.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T090140.200.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T090136.200.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwODcxYTkxYi00MWRhLTQ0OGItYWFlZS03MzI2NTgxNjNmNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTQ0NzU0MCwiZXhwIjoxNTkxNTMzOTQwfQ.3ZvZvdp97amV_DZvuFdNnIoEXypCnywknz8HKYNStOXxsDjWdxwtPqdgo032c2P3MLmt-cpWKprnumanvguK8A
+
+<> 2020-06-06T084550.200.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T084540.200.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout1
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYjJkYjZlNC05ZmFkLTRkNzAtOWY1Ni04Mjk1NmY3ZTA3NGUiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTQ0NzUwNywiZXhwIjoxNTkxNTMzOTA3fQ.Nj-DRK-RcHARtESB4n06gdRUqzdALbWuQ0ywYy57hqy-neiR4XsEA5TdceGoLrFVXdihJ65cmSGVpbEgrIKK6A
+
+<> 2020-06-06T084533.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/logout
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYjJkYjZlNC05ZmFkLTRkNzAtOWY1Ni04Mjk1NmY3ZTA3NGUiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTQ0NzUwNywiZXhwIjoxNTkxNTMzOTA3fQ.Nj-DRK-RcHARtESB4n06gdRUqzdALbWuQ0ywYy57hqy-neiR4XsEA5TdceGoLrFVXdihJ65cmSGVpbEgrIKK6A
+
+<> 2020-06-06T084525.200.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T084507.200.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login1
+Content-Type: application/json
+
+{
+  "account": "",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T084456.400.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T084443.400.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T084410.400.json
+
+###
+
+GET http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T084336.405.json
+
+###
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "1"
+}
+
+<> 2020-06-06T084320.200.json
+
+###
+
 GET http://localhost:8080/api/v1/user/logout
 token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhNjI3OTc0MC0zNjRmLTRiYTctODMzMS1kMDkyYWMyZTExZDQiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMiIsIm5iZiI6MTU5MTQzNjAwMiwiZXhwIjoxNTkxNTIyNDAyfQ.vC1TP1KpPFzBSZDCHAFxIW9_0BuRFvrt45d6HwdIVbEIY3fENcojGDOBK8NQX2Mt5OuVA0X0-PZoDSi4BEq7hQ
 
@@ -254,144 +508,6 @@ GET http://localhost:8080/api/v1/user/logout
 token: eyJhbGciOiJIUzUxMiJ
 
 <> 2020-06-06T023028.400.json
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-
-<> 2020-06-06T022935.400.json
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-
-<> 2020-06-06T022757.500.json
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-
-<> 2020-06-06T022708.500.json
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
-
-<> 2020-06-06T022349.400.json
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-
-<> 2020-06-06T022345.400.json
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-
-<> 2020-06-06T022252.400.json
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-
-<> 2020-06-06T022219.400.json
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-
-<> 2020-06-06T022126.400.json
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-
-<> 2020-06-06T020800.500.json
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-
-<> 2020-06-06T014714.500.json
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-
-<> 2020-06-06T014529.500.json
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-token: eyJhbGciOiJI
-
-###
-
-POST http://localhost:8080/api/v1/user/login
-Content-Type: application/json
-
-{
-  "account": "zjb",
-  "password": "123456",
-  "signature": "2"
-}
-
-<> 2020-06-06T014422.200.json
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlYzNmOGI2OC1kYWU5LTQyNDQtYmNkZC0yYjMyMDk4YTQ4OTEiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMiIsIm5iZiI6MTU5MTQyMjA5MCwiZXhwIjoxNTkxNTA4NDkwfQ.6VznqH7aCUgCe6J5RHkiW2ML1ty2jh-k381btdg4hfD18qIg8RQbX0Nj_SlWsDR8lSpfkZlqBwNA9322tV859A
-
-<> 2020-06-06T014416.400.json
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlYzNmOGI2OC1kYWU5LTQyNDQtYmNkZC0yYjMyMDk4YTQ4OTEiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMiIsIm5iZiI6MTU5MTQyMjA5MCwiZXhwIjoxNTkxNTA4NDkwfQ.6VznqH7aCUgCe6J5RHkiW2ML1ty2jh-k381btdg4hfD18qIg8RQbX0Nj_SlWsDR8lSpfkZlqBwNA9322tV859A
-
-<> 2020-06-06T014329.400.json
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlYzNmOGI2OC1kYWU5LTQyNDQtYmNkZC0yYjMyMDk4YTQ4OTEiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMiIsIm5iZiI6MTU5MTQyMjA5MCwiZXhwIjoxNTkxNTA4NDkwfQ.6VznqH7aCUgCe6J5RHkiW2ML1ty2jh-k381btdg4hfD18qIg8RQbX0Nj_SlWsDR8lSpfkZlqBwNA9322tV859A
-
-<> 2020-06-06T014141.400.json
-
-###
-
-POST http://localhost:8080/api/v1/user/login
-Content-Type: application/json
-
-{
-  "account": "zjb",
-  "password": "123456",
-  "signature": "2"
-}
-
-<> 2020-06-06T014130.200.json
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2YjNjNzRiNi0xNzliLTQ0ZGQtYWRlMC1iYjQzNmViOTYzNjAiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1MDAzOCwiZXhwIjoxNTkxNDM2NDM4fQ.oegN4wsogpEReNPzipeCKMBOKOQ1R8m0schhpH-SlqLL5ekeCxMuQzbHel7_ZrdFnR44USbirNbBlqhXNac5Hw
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-token: eyJhb
-
-###
-
-GET http://localhost:8080/api/v1/user/logout
-token: eyJhb
 
 ###
 
