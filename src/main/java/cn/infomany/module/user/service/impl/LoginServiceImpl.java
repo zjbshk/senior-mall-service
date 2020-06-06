@@ -82,25 +82,28 @@ public class LoginServiceImpl extends BaseService<LoginDao, LoginMapper, LoginEn
     }
 
     @Override
-    public Result logout(Long no) {
-
+    public Result logout(Long no, String signature) {
+        log.info("登出，用户编号:{},用户签名:{}", no, signature);
         // 删除redis中的token信息
-        tokenRedisUtil.del(no, null);
-
-//        String salt = PasswordUtil.createSalt();
-//        String s = PasswordUtil.encryptedPassword("123456", salt);
-//
-//        LoginEntity loginEntity = new LoginEntity();
-//
-//        loginEntity.setPassword(s)
-//                .setSalt(salt)
-//                .setUsername("zjb")
-//                .setState(LoginUserStateEnum.NORMAL.getState())
-//                .setPhone("12345678912");
-//
-//        baseMapper.insert(loginEntity);
-
+        tokenRedisUtil.del(no, signature);
         return Result.success();
+    }
+
+
+    public Result addUser() {
+        String salt = PasswordUtil.createSalt();
+        String s = PasswordUtil.encryptedPassword("123456", salt);
+
+        LoginEntity loginEntity = new LoginEntity();
+
+        loginEntity.setPassword(s)
+                .setSalt(salt)
+                .setUsername("zjb")
+                .setState(LoginUserStateEnum.NORMAL.getState())
+                .setPhone("12345678912");
+
+        baseMapper.insert(loginEntity);
+        return null;
     }
 }
 

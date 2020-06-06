@@ -1,6 +1,8 @@
 package cn.infomany.config;
 
+import cn.infomany.common.resolver.UserInfoArgumentResolver;
 import cn.infomany.common.resolver.UserNoArgumentResolver;
+import cn.infomany.common.resolver.UserSignatureArgumentResolver;
 import cn.infomany.interceptor.AuthenticationInterceptor;
 import cn.infomany.interceptor.FrequencyInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +19,7 @@ import java.util.List;
  * @author zjb
  */
 @Configuration
-public class InterceptorConfig extends WebMvcConfigurationSupport {
+public class InterceptorAndArgResolverConfig extends WebMvcConfigurationSupport {
 
 
     @Autowired
@@ -28,6 +30,7 @@ public class InterceptorConfig extends WebMvcConfigurationSupport {
 
     /**
      * interceptor配置
+     * 将拦截器加入到spring boot进行管理
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -37,10 +40,17 @@ public class InterceptorConfig extends WebMvcConfigurationSupport {
         super.addInterceptors(registry);
     }
 
+
+    /**
+     * 将参数解析器加入到springboot中
+     *
+     * @param argumentResolvers
+     */
     @Override
     protected void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
-
         super.addArgumentResolvers(argumentResolvers);
         argumentResolvers.add(new UserNoArgumentResolver());
+        argumentResolvers.add(new UserInfoArgumentResolver());
+        argumentResolvers.add(new UserSignatureArgumentResolver());
     }
 }

@@ -16,7 +16,6 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * 登录拦截器
@@ -61,9 +60,11 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
         Long no = (Long) map.get(LoginTokenUtil.NO);
         String signature = (String) map.get(LoginTokenUtil.SIGNATURE);
 
+
         String token = tokenRedisUtil.get(no, signature);
+        // 判断是不是退出登录了
         if (StringUtils.isEmpty(token)) {
-            throw new BusinessException(ErrorCodeEnum.TOKEN_EXPIRED);
+            throw new BusinessException(ErrorCodeEnum.TOKEN_INVALID);
         }
 
         // 判断token是不是一样的，不是代表被挤下线
@@ -77,6 +78,4 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
 
         return true;
     }
-
-
 }

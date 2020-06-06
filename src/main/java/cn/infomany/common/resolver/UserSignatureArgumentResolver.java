@@ -1,6 +1,5 @@
 package cn.infomany.common.resolver;
 
-import cn.infomany.common.anno.UserNo;
 import cn.infomany.common.anno.UserSignature;
 import cn.infomany.common.constant.Resource;
 import org.springframework.core.MethodParameter;

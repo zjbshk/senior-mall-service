@@ -27,6 +27,5 @@ public class LoginDTO {
      * 客户端签名，用来区分多个端登录
      */
     @NotNull(message = "签名[signature]不能为空")
-
     private String signature;
 }

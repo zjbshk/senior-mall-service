@@ -28,9 +28,10 @@ public interface ILoginService extends IService<LoginEntity> {
      * 登出方法，将token在redis中设置为过期
      *
      * @param no
+     * @param signature
      * @return
      */
-    Result logout(Long no);
+    Result logout(Long no, String signature);
 }
 
 

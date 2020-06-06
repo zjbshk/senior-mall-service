@@ -1,6 +1,7 @@
 package cn.infomany.module.user.api;
 
 import cn.infomany.common.anno.UserNo;
+import cn.infomany.common.anno.UserSignature;
 import cn.infomany.common.domain.Result;
 import cn.infomany.module.user.domain.dto.AddUserDTO;
 import cn.infomany.module.user.domain.dto.LoginDTO;
@@ -35,8 +36,9 @@ public class UserController {
     }
 
     @GetMapping("/logout")
-    public Result logout(@UserNo Long no) {
-        return loginService.logout(no);
+    public Result logout(@UserNo Long no, @UserSignature String signature) {
+
+        return loginService.logout(no,signature);
     }
 
     @PostMapping("")

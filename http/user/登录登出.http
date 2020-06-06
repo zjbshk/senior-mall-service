@@ -1,0 +1,17 @@
+POST {{host}}/api/v1/user/login
+Content-Type: application/json
+
+{
+  "account": "zjb",
+  "password": "123456",
+  "signature": "2"
+}
+
+> {%
+client.global.set("token",response.body.data.token)
+%}
+
+###
+GET {{host}}/api/v1/user/logout
+token: {{token}}
+
