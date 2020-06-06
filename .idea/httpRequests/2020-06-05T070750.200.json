@@ -1,8 +1,0 @@
-{
-  "code": 0,
-  "msg": "成功",
-  "data": {
-    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMzM2ZTk3NS0zYjYyLTRhYTUtOTBmYS1kNGJkNTE3N2VkNmYiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1NTI2OSwiZXhwIjoxNTkxNDQxNjY5fQ.DVYkVhWKHSsvDbAducCRYDLXejab_6y6uUxowsgzEMMsjxnZ9RSy3LXNrYyCt-LZqNEQhYiCbIHyDvOzE_L-Pw",
-    "expired": 1591441669063
-  }
-}

@@ -37,7 +37,9 @@ public enum ErrorCodeEnum {
     INCORRECT_USERNAME_OR_PASSWORD(1101, "账号或密码错误", "Incorrect username or password"),
     ACCOUNT_IS_FREEZE(1102, "账号被冻结", "Account is freeze"),
     TOKEN_EXPIRED(1103, "token过期", "Token expired"),
-    THE_DEVICE_WAS_SQUEEZED_OFF_LINE_TOKEN_INVALID(1104, "设备被挤下线，令牌失效", "The device is squeezed offline token invalid"),
+    TOKEN_ERROR(1104, "token错误", "Token error"),
+    THE_DEVICE_WAS_SQUEEZED_OFF_LINE_TOKEN_INVALID(1105, "设备被挤下线，令牌失效", "The device is squeezed offline token invalid"),
+    TOKEN_INVALID(1106, "token失效", "Token invalid"),
 
 
     ;

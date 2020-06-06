@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.*;
@@ -76,7 +77,7 @@ public class LoginTokenUtil {
      * @return no 用户逻辑主键no
      */
     public String getSignatureByToken(String token) {
-        Map mapByToken = getMapByToken(token);
+        Map<String, Object> mapByToken = getMapByToken(token);
         return mapByToken.get(SIGNATURE).toString();
     }
 
@@ -87,7 +88,7 @@ public class LoginTokenUtil {
      * @return no 用户逻辑主键no
      */
     public Long getNoByToken(String token) {
-        Map mapByToken = getMapByToken(token);
+        Map<String, Object> mapByToken = getMapByToken(token);
         String noStr = mapByToken.get(NO).toString();
         return Long.valueOf(noStr);
     }
@@ -98,7 +99,7 @@ public class LoginTokenUtil {
      * @param token
      * @return
      */
-    public Map getMapByToken(String token) {
+    public Map<String, Object> getMapByToken(String token) {
         try {
             Claims claims = Jwts.parser().setSigningKey(jwtKey).parseClaimsJws(token).getBody();
             Map<String, Object> map = new HashMap<>(2);
@@ -110,4 +111,12 @@ public class LoginTokenUtil {
         }
     }
 
+    /**
+     * 获取请求的token
+     */
+    public static String getRequestToken(HttpServletRequest httpRequest) {
+        // 优先从请求头部获取，当头部没有的时候再从参数中获取
+        return Optional.ofNullable(httpRequest.getHeader(Resource.TOKEN))
+                .orElse(httpRequest.getParameter(Resource.TOKEN));
+    }
 }

@@ -54,12 +54,12 @@
             <version>1.12.1</version>
         </dependency>
 
-        <!-- shiro -->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.shiro</groupId>-->
-<!--            <artifactId>shiro-spring-boot-starter</artifactId>-->
-<!--            <version>1.4.0</version>-->
-<!--        </dependency>-->
+        <!--    shiro   -->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring-boot-starter</artifactId>
+            <version>1.4.0</version>
+        </dependency>
 
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -113,11 +113,11 @@
             <optional>true</optional>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.ibeetl</groupId>-->
-<!--            <artifactId>beetl</artifactId>-->
-<!--            <version>${beetl.version}</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.ibeetl</groupId>-->
+        <!--            <artifactId>beetl</artifactId>-->
+        <!--            <version>${beetl.version}</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>io.jsonwebtoken</groupId>

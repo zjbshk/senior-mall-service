@@ -19,11 +19,12 @@ import java.util.List;
 @Configuration
 public class InterceptorConfig extends WebMvcConfigurationSupport {
 
-    @Autowired
-    private AuthenticationInterceptor authenticationInterceptor;
 
     @Autowired
     private FrequencyInterceptor frequencyInterceptor;
+
+    @Autowired
+    private AuthenticationInterceptor authenticationInterceptor;
 
     /**
      * interceptor配置

@@ -4,6 +4,7 @@ import cn.infomany.common.constant.ErrorCodeEnum;
 import cn.infomany.common.domain.Result;
 import cn.infomany.common.exception.BusinessException;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.shiro.authc.AuthenticationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.BindException;
@@ -44,6 +45,15 @@ public class GlobalExceptionHandler {
 
         String msg = String.format(ErrorCodeEnum.ERROR_PARAM.getMsg(), e.getParameterName());
         return Result.wrap(ErrorCodeEnum.ERROR_PARAM.setMsg(msg));
+    }
+
+    /**
+     * Shiro授权失败异常
+     */
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(AuthenticationException.class)
+    public Result exceptionHandler(AuthenticationException e) {
+        return Result.wrap(ErrorCodeEnum.ERROR_PARAM.setMsg(e.getMessage()));
     }
 
     /**

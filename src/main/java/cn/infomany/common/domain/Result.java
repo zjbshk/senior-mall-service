@@ -5,6 +5,8 @@ import cn.infomany.common.constant.ErrorCodeEnum;
 import lombok.Builder;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * 返回类
  *
@@ -13,7 +15,7 @@ import lombok.Data;
  */
 @Data
 @Builder
-public class Result {
+public class Result implements Serializable {
 
 
     private Integer code;

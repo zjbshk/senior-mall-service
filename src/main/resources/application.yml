@@ -24,8 +24,8 @@ spring:
           password: 111111
           driver-class-name: com.mysql.cj.jdbc.Driver
 
+#  设置是否开启跨域
 access-control-allow-origin-enable: true
-access-control-allow-origin: infomany.cn
 
 jwt:
   key: old-man-mall-service

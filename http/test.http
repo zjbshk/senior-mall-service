@@ -4,12 +4,12 @@ Content-Type: application/json
 {
   "account": "zjb",
   "password": "123456",
-  "signature": "1"
+  "signature": "2"
 }
 
 ###
 GET http://localhost:8080/api/v1/user/logout
-token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMzM2ZTk3NS0zYjYyLTRhYTUtOTBmYS1kNGJkNTE3N2VkNmYiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMSIsIm5iZiI6MTU5MTM1NTI2OSwiZXhwIjoxNTkxNDQxNjY5fQ.DVYkVhWKHSsvDbAducCRYDLXejab_6y6uUxowsgzEMMsjxnZ9RSy3LXNrYyCt-LZqNEQhYiCbIHyDvOzE_L-Pw
+token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZjQ4NTE2My1jZjNiLTQ1M2YtOTljNC1jN2Q3NjRiMmMyN2EiLCJubyI6MTI2ODE3ODYwNDYzODk5ODUzMCwic2lnbmF0dXJlIjoiMiIsIm5iZiI6MTU5MTQyNTQwMywiZXhwIjoxNTkxNTExODAzfQ.sHs03Kea8DjoGI47LbFMUki5Zk7fq7QjioQPi0aRaUiwtWymOll-68LcQ6jsLH4bjEAA0Gem50XE1J03jQt11g
 ###
 
 GET http://localhost:8080/api/v1/user/logout
