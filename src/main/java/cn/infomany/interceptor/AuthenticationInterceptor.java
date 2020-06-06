@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
 /**
- * 登录拦截器
+ * 鉴权拦截器
  *
  * @author zjb
  */

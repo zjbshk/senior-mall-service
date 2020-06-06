@@ -1,7 +1,6 @@
 package cn.infomany.shiro;
 
 import cn.infomany.common.constant.ErrorCodeEnum;
-import cn.infomany.common.exception.BusinessException;
 import cn.infomany.util.LoginTokenUtil;
 import cn.infomany.util.TokenRedisUtil;
 import io.jsonwebtoken.ExpiredJwtException;

@@ -1,7 +1,6 @@
 package cn.infomany.common.exception;
 
 import cn.infomany.common.constant.ErrorCodeEnum;
-import org.apache.shiro.authc.AuthenticationException;
 
 /**
  * [ 业务逻辑异常,全局异常拦截后统一返回ResponseCodeConst.SYSTEM_ERROR ]

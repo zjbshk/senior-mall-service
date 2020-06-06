@@ -1,10 +1,8 @@
 package cn.infomany.shiro;
 
 import cn.hutool.core.io.IoUtil;
-import cn.infomany.common.constant.ErrorCodeEnum;
 import cn.infomany.common.constant.Resource;
 import cn.infomany.common.domain.Result;
-import cn.infomany.common.exception.BusinessException;
 import cn.infomany.util.LoginTokenUtil;
 import com.alibaba.fastjson.JSON;
 import org.apache.shiro.authc.AuthenticationException;
@@ -19,7 +17,6 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Objects;
 
 
 /**

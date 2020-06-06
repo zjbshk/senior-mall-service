@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Objects;
 
 /**
- * 登录拦截器
+ * 访问频率拦截器
  *
  * @author zjb
  */

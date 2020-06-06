@@ -36,6 +36,14 @@ public class LoginTokenUtil {
     @Value("${jwt.key}")
     private String jwtKey;
 
+    /**
+     * 获取请求的token
+     */
+    public static String getRequestToken(HttpServletRequest httpRequest) {
+        // 优先从请求头部获取，当头部没有的时候再从参数中获取
+        return Optional.ofNullable(httpRequest.getHeader(Resource.TOKEN))
+                .orElse(httpRequest.getParameter(Resource.TOKEN));
+    }
 
     public Integer getExpireSeconds() {
         return expireSeconds;
@@ -109,14 +117,5 @@ public class LoginTokenUtil {
             log.error("解析token获取no失败", e);
             throw e;
         }
-    }
-
-    /**
-     * 获取请求的token
-     */
-    public static String getRequestToken(HttpServletRequest httpRequest) {
-        // 优先从请求头部获取，当头部没有的时候再从参数中获取
-        return Optional.ofNullable(httpRequest.getHeader(Resource.TOKEN))
-                .orElse(httpRequest.getParameter(Resource.TOKEN));
     }
 }

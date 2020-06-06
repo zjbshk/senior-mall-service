@@ -38,7 +38,7 @@ public class UserController {
     @GetMapping("/logout")
     public Result logout(@UserNo Long no, @UserSignature String signature) {
 
-        return loginService.logout(no,signature);
+        return loginService.logout(no, signature);
     }
 
     @PostMapping("")

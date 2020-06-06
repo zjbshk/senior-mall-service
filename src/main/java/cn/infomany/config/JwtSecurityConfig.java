@@ -10,7 +10,6 @@ import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSource
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
@@ -60,7 +59,7 @@ public class JwtSecurityConfig {
     /**
      * 自定义过滤器，处理所有请求
      */
-    private Map<String, Filter> filterMap( ) {
+    private Map<String, Filter> filterMap() {
         Map<String, Filter> filterMap = new HashMap<>(1);
         filterMap.put(JWT_FILTER_NAME, new JwtFilter());
         return filterMap;
