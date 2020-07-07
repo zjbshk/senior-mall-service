@@ -1,0 +1,12 @@
+version: '1'
+services:
+  service:
+    image: dockerTest:1.0
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8081:8081
+    environment:
+      - spring.profiles.active=dev
+    container_name: dockerTest
