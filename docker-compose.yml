@@ -1,7 +1,7 @@
 version: '1'
 services:
   service:
-    image: dockerTest:1.0
+    image: docker.test:1.0
     build:
       context: .
       dockerfile: ./Dockerfile
